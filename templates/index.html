@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero">
+    <h1>🚀 Own Your Career Journey</h1>
+    <p>Track goals, analyze skills, and get AI-powered guidance tailored to your unique profile.</p>
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('register') }}" class="btn btn-primary">Get Started Now</a>
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Welcome Back</a>
+    </div>
+</div>
+
+<div class="grid" style="margin-top: 3rem;">
+    <div class="card feature-cards">
+        <img src="/images/goalSetting.jpg" alt="Goal Setting">
+        <h3 style="color: var(--primary-color);"><i class="fas fa-bullseye"></i> Goal Tracking</h3>
+        <p>Set specific milestones and track your success with our intuitive status dashboard. Visual progress indicators help you stay motivated.</p>
+    </div>
+    <div class="card feature-cards">
+        <img src="/images/aiCoach.jpg" alt="AI Coach">
+        <h3 style="color: var(--secondary-color);"><i class="fas fa-brain"></i> AI Career Coach</h3>
+        <p>Leverage Google Gemini to get personalized roadmap suggestions based on your interests and skills.</p>
+    </div>
+    <div class="card feature-cards">
+        <img src="/images/analytics.jpg" alt="Analytics">
+        <h3 style="color: var(--danger-color);"><i class="fas fa-chart-line"></i> Progress Analytics</h3>
+        <p>Visualize your achievements and identify skill gaps automatically with detailed charts and insights.</p>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 3rem; text-align: center;">
+    <h2>✨ How CareerPulse Works</h2>
+    <p style="margin: 1rem 0; font-size: 1.1rem;">Follow these simple steps to transform your career</p>
+    <div class="image-gallery">
+        <div class="gallery-item">
+            <img src="/images/step1.jpg" alt="Step 1: Track">
+            <h4 style="margin-top: 0.8rem; text-align: center;">Step 1: Set Goals</h4>
+            <p style="font-size: 0.9rem; text-align: center; color: var(--text-color);">Define your career objectives with clear milestones.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/step2.jpg" alt="Step 2: Analyze">
+            <h4 style="margin-top: 0.8rem; text-align: center;">Step 2: Track Progress</h4>
+            <p style="font-size: 0.9rem; text-align: center; color: var(--text-color);">Monitor your achievements with real-time analytics.</p>
+        </div>
+        <div class="gallery-item">
+            <img src="/images/step3.jpg" alt="Step 3: Succeed">
+            <h4 style="margin-top: 0.8rem; text-align: center;">Step 3: Succeed</h4>
+            <p style="font-size: 0.9rem; text-align: center; color: var(--text-color);">Achieve your dreams with AI-powered guidance.</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 3rem;">
+    <h2>Why Choose CareerPulse?</h2>
+    <div class="grid" style="margin-top: 1.5rem;">
+        <div style="padding: 1rem; background: var(--bg-color); border-radius: 8px; animation: fadeIn 0.8s ease-out;">
+            <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">📊 Smart Goal Management</h4>
+            <p>Automatically mark missed deadlines and track your progress with beautiful calendars.</p>
+        </div>
+        <div style="padding: 1rem; background: var(--bg-color); border-radius: 8px; animation: fadeIn 0.8s ease-out 0.1s both;">
+            <h4 style="color: var(--secondary-color); margin-bottom: 0.5rem;">🤖 AI-Powered Insights</h4>
+            <p>Get personalized career advice that adapts to your goals and achievements.</p>
+        </div>
+        <div style="padding: 1rem; background: var(--bg-color); border-radius: 8px; animation: fadeIn 0.8s ease-out 0.2s both;">
+            <h4 style="color: var(--danger-color); margin-bottom: 0.5rem;">👥 Community Support</h4>
+            <p>Connect with other professionals, share ideas, and learn from their experiences.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

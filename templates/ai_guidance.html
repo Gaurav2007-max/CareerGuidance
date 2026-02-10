@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2><i class="fas fa-robot"></i> AI Career Advisor</h2>
+    <p>Ask anything about your career path. The AI already knows your background for better context!</p>
+    
+    <form action="{{ url_for('ai_guidance') }}" method="POST" id="aiForm" style="margin-top: 1.5rem;">
+        <div class="form-group">
+            <label>What would you like to know?</label>
+            <textarea name="query" rows="4" placeholder="e.g. Can you suggest a learning roadmap for my goal? Or how should I improve my skills?" required></textarea>
+        </div>
+        <div class="form-group" style="max-width: 200px;">
+            <label>Response Detail Level</label>
+            <select name="length">
+                <option value="Short" selected>Short & Concise (~100 words)</option>
+                <option value="Medium" >Detailed Advisor (~300 words)</option>
+                <option value="Large">Comprehensive Roadmap (~600+ words)</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Ask Path Finder</button>
+    </form>
+
+    {% if response %}
+    <div class="ai-output">
+        {{ response }}
+    </div>
+    {% endif %}
+</div>
+
+<div class="card" style="margin-top: 2rem; background: #eef2ff;">
+    <h3>Popular AI Prompts</h3>
+    <ul style="margin: 1rem 2rem;">
+        <li>"What are the top 3 skills I'm missing for my goal?"</li>
+        <li>"Create a 5-step roadmap for the next 6 months."</li>
+        <li>"How can I combine my interest in AI with my current job?"</li>
+    </ul>
+</div>
+{% endblock %}
